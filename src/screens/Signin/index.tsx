@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, Image, StatusBar} from 'react-native';
 
+import { ButtonIcon } from '../../components/ButtonIcon';
 import IllustrationImg from '../../assets/illustration.png';
 import { styles } from './styles';
 
@@ -29,6 +30,12 @@ export function SignIn() {
                 Crie grupos para jogar seu games {`\n`}
                 favoritos com seus amigos {`\n`}
             </Text>
+
+            <ButtonIcon
+                title="Entrar"
+                activeOpacity={0.7}
+            />
+
         </View>
     </View>
   );

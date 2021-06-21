@@ -4,7 +4,6 @@ import { theme } from '../../global/styles/theme';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: theme.colors.background,
@@ -20,6 +19,7 @@ export const styles = StyleSheet.create({
     },
     content: {
         marginTop: -40,
+        paddingHorizontal: 50
     },
     title: {
         color: theme.colors.heading,
@@ -33,5 +33,4 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         marginBottom: 64,
     }
-
 })
