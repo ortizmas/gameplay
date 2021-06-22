@@ -1,26 +1,28 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Image } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+
 
 import { styles } from './styles';
+import { theme } from '../../global/styles/theme';
 
-export function Profile() {
+type Props = {
+    urlImage: string;
+}
+
+export function Avatar({ urlImage }: Props) {
+    const { secondary50, secondary70 } = theme.colors;
+
     return(
-        <View style={styles.container}>
-            <View>
-                <View style={styles.user}>
-                    <Text style={styles.greeting}>
-                        Olá,
-                    </Text>
-
-                    <Text style={styles.username}>
-                        Rodrigo
-                    </Text>
-                </View>
-
-                <Text style={styles.message}>
-                    Hoje é dia de vitoria
-                </Text>
-            </View>
-        </View>
+        <LinearGradient 
+            style={styles.container}
+            colors={[secondary50, secondary70]}
+        >
+            <Image
+                source={{uri: urlImage}}
+                style={styles.avatar}
+            />
+        </LinearGradient>
     );
 }
